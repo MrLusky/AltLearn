@@ -384,3 +384,28 @@ html.high-contrast .syl-mark { background: #000 !important; border: 2px solid #f
   .site-navbar .avatar-link { width: 40px; height: 40px; }
   .site-navbar .brand-name { font-size: calc(15px * var(--fs)); }
 }
+
+/* ---------- Logo recortada (sem margem transparente) ---------- */
+.site-navbar .avatar-link img { width: 88%; height: 88%; object-fit: contain; transform: none; }
+.auth-logo { width: 156px; height: auto; margin: 0 auto 10px; }
+
+/* ---------- Cabeçalho no celular: duas linhas ---------- */
+@media (max-width: 760px) {
+  :root { --nav-row2: calc(38px var(--fs)); }
+  .site-navbar { top: calc(-1 * var(--nav-row2)); }
+  .site-navbar .navbar-inner { flex-wrap: wrap; align-content: flex-start; row-gap: 0; gap: 0 9px; min-height: 0; padding-block: 0; }
+  .site-navbar .brand { order: 1; flex: 1 1 auto; min-height: 54px; display: flex; align-items: center; }
+  .site-navbar .navbar-actions { order: 2; min-height: 54px; gap: 8px; }
+  .site-navbar .main-nav { order: 3; flex: 0 0 100%; justify-content: center; gap: 26px; margin: 0; height: var(--nav-row2); border-top: 1px solid rgba(24,35,58,.12); }
+  .site-navbar .main-nav a { display: flex; align-items: center; min-height: 44px; font-size: calc(16px * var(--fs)); font-weight: 800; }
+  .site-navbar .main-nav a.is-current { text-decoration-thickness: 3px; }
+  .auth-logo { width: 140px; }
+}
+@media (max-width: 520px) { .site-navbar .main-nav a:nth-child(2) { display: none; } }
+
+/* ---------- Imagem dos cards de atividade: nunca cortar ---------- */
+.activity-image { position: relative; }
+.activity-image img { position: absolute; inset: 6%; width: 88%; height: 88%; max-width: none; max-height: none; object-fit: contain; }
+@media (max-width: 760px) {
+  .student-grid .activity-image { height: 150px; flex: none; }
+}
