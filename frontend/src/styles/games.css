@@ -386,8 +386,8 @@ html.high-contrast .syl-mark { background: #000 !important; border: 2px solid #f
 }
 
 /* ---------- Logo recortada (sem margem transparente) ---------- */
-.site-navbar .avatar-link img { width: 88%; height: 88%; object-fit: contain; transform: none; }
-.auth-logo { width: 156px; height: auto; margin: 0 auto 10px; }
+.site-navbar .avatar-link img { width: 100%; height: 100%; object-fit: cover; transform: scale(1.65); }
+.auth-logo { width: 330px; height: auto; margin: 0 auto -40px; }
 
 /* ---------- Cabeçalho no celular: duas linhas ---------- */
 @media (max-width: 760px) {
