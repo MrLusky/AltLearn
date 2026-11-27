@@ -1,0 +1,34 @@
+import { Link } from 'react-router-dom'
+
+// Grade de atividades da página inicial. Cada item leva ao jogo (ou à tela indicada em `to`).
+function Card({ items }) {
+  return (
+    <section className="activities-section" id="atividades">
+      <div className="content-container">
+        <div className="section-heading">
+          <div>
+            <span className="section-eyebrow">ATIVIDADES</span>
+            <h2>Encontre seu próximo desafio.</h2>
+          </div>
+          <p>Experiências rápidas para praticar, explorar e avançar todos os dias.</p>
+        </div>
+
+        <div className="activity-grid is-home">
+          {items.map((item) => (
+            <article className="activity-card" key={item.id}>
+              <div className="activity-image">
+                <img src={item.image} alt="" />
+              </div>
+              <span className="activity-subject">{item.subject}</span>
+              <h3>{item.title}</h3>
+              <p>{item.description}</p>
+              <Link className="card-button" to={item.to}>{item.cta || 'Vamos lá'}</Link>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
+
+export default Card

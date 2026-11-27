@@ -1,0 +1,14 @@
+# MySQL para desenvolvimento:  docker compose up -d
+services:
+  mysql:
+    image: mysql:8.4
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: altlearn
+      MYSQL_USER: altlearn
+      MYSQL_PASSWORD: altlearn_senha
+      MYSQL_ROOT_PASSWORD: root_senha
+    ports: ["3306:3306"]
+    volumes: [altlearn_mysql:/var/lib/mysql]
+volumes:
+  altlearn_mysql:

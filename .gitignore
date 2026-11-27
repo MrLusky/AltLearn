@@ -1,0 +1,5 @@
+node_modules/
+dist/
+laravel-app/vendor/
+.env
+.DS_Store
