@@ -32,11 +32,3 @@ Sem MySQL/API o site continua funcionando como visitante (progresso guardado no 
 
 Detalhes pedagógicos e de acessibilidade: `docs/CONTEUDO_E_BNCC.md`.
 Celular, GitHub Pages e publicação da API: `docs/DEPLOY.md`. Login com Google: `docs/GOOGLE_LOGIN.md`.
-
-## Pontos de atenção (o artigo precisa ficar coerente com o código)
-1. O artigo diz que manifesto, service worker, funcionamento offline e armazenamento local **não** estavam confirmados. Agora **estão implementados** — atualize as seções 2.4, 4.x e 5.
-2. **Vibração não foi implementada** (o protótipo chamava `navigator.vibrate` sem controle; removi, como o artigo orienta).
-3. O artigo descreve tema fixo; o protótipo já trazia modo escuro e eu mantive.
-4. "Entrar com Google" está implementado, mas só aparece ativo depois de você criar o ID do cliente (`docs/GOOGLE_LOGIN.md`).
-5. Códigos BNCC marcados com * em `docs/CONTEUDO_E_BNCC.md` não estão no artigo; validar com professores.
-6. Não há testes com crianças/profissionais: o conteúdo e os jogos são uma proposta inicial.
