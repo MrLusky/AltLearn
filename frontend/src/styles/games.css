@@ -360,3 +360,27 @@ html.light-mode:not(.high-contrast) .auth-button, html.dark-mode:not(.high-contr
 .syl-mark { padding: 0 .12em; border-radius: 8px; background: #ffe48a; color: inherit; }
 html.high-contrast .syl-mark { background: #000 !important; border: 2px solid #ffff00; }
 .clap-row { min-height: 84px; }
+
+/* ---------- Rodapé em telas pequenas ---------- */
+@media (max-width: 900px) {
+  .site-footer { display: grid; grid-template-columns: 1fr 1fr; align-items: center; column-gap: 8px; min-height: 0; padding-bottom: 22px; }
+  .site-footer .footer-inner { grid-column: 1 / -1; grid-row: 1; width: 100%; }
+  .site-footer .footer-bottom { grid-column: 1 / -1; grid-row: 2; width: 100%; padding-bottom: 6px; }
+  .site-footer .footer-art { position: static; grid-row: 3; width: auto; margin: 6px 0 0; opacity: .95; }
+  .site-footer .footer-clouds { grid-column: 1; justify-self: start; }
+  .site-footer .footer-clouds img { width: min(100%, 190px); }
+  .site-footer .footer-stars { grid-column: 2; justify-self: end; }
+  .site-footer .footer-stars img { width: min(100%, 130px); transform: none; }
+}
+
+/* ---------- Logo do cabeçalho maior ---------- */
+.site-navbar, .navbar-inner { min-height: 62px; }
+.site-navbar .avatar-link { width: 46px; height: 46px; border-width: 2px; background: #fff; }
+.site-navbar .avatar-link img { object-fit: cover; object-position: 50% 50%; transform: scale(1.65); }
+.site-navbar .brand-name { font-size: calc(19px var(--fs)); }
+
+@media (max-width: 760px) {
+  .site-navbar, .navbar-inner { min-height: 54px; }
+  .site-navbar .avatar-link { width: 40px; height: 40px; }
+  .site-navbar .brand-name { font-size: calc(15px * var(--fs)); }
+}
